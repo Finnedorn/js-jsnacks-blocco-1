@@ -27,7 +27,7 @@ const fridge = [
     'cocomero',
     'limone',
     'fragola'
-]
+];
 //2. aggiungere la pesca all'array della frutta
 fridge.push('pesca');
 /*
@@ -35,5 +35,32 @@ fridge.push('pesca');
 - se c'è stampiamo: "Trovato! Devo solo preparare il cocktail."
 - se non lo trovo: "Oh no, devo uscire a comprare il cocomero!"
 */
+let watermelon = false;
+
+for (i = 0; i <= fridge.length; i++) {
+    if ( fridge[i] == 'cocomero') {
+        watermelon = true
+    }
+};
+
+if (watermelon) {
+    console.log('Trovato! Devo solo preparare il cocktail.')
+} else {
+    console.log('Oh no, devo uscire a comprare il cocomero!')
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
