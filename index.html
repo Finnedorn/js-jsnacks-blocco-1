@@ -2,21 +2,34 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <title>snacks</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <title>snacks</title>
 </head>
 
 <body>
-    <!--snack 01-->
-  <div id="app" class="container d-none">
+  <!--snack 01-->
+  <div id="app" class="container">
     <h1>snack</h1>
-    <label for="nome">dato in input</label>
-    <input type="text" name="data" id="data">
-    <button class="btn btn-success">bottone</button>
+    <div class="py-4">
+      <label for="nome">
+        Quanti elementi dovrà avere contere questo array?
+      </label>
+      <input type="text" name="data" id="data">
+    </div>
+    <div id="result"></div>
+    <div class="py-4">
+      <label for="nome">
+        Quanti elementi vuoi stampare?
+      </label>
+      <input type="text" name="data" id="data">
+      
+    </div>
+    <button class="btn btn-success">
+      Genera
+    </button>
     <div class="alert d-none"></div>
   </div>
   <script src="js/script.js" type="text/javascript"></script>
