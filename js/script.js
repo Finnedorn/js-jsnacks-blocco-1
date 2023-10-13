@@ -84,7 +84,7 @@ btn.addEventListener('click', function() {
     console.log(arrnumber, list);
     //creo un ciclo che cicli tanto quanto il valore inserito nell'input
     //in questo modo però il sistema mi tirerà fuori un solo valore cioè l'ultimo generato
-    for(i = 0; i < arrnumber; i++) {
+    for(let i = 0; i < arrnumber; i++) {
         //pertento voglio che per ogni valore generato pushi un numero a caso estratto dal rng in un array dichiarato prima 
         list.push(getRndInteger(1, 101));
     };
@@ -105,7 +105,16 @@ btn.addEventListener('click', function() {
     } else {
         result.innerHTML =`Ecco gli ultimi 5 valori: ${lastfive}.`
     }
+    
+    let howmany = document.getElementById('howmany').value;
+    let howmanyresult =[];
+    for(let i = howmany; i >= 1 ; i--) {
+        howmanyresult.push(list[list.length - i]);
+    }
+    console.log(howmanyresult);
+    
 });
+
 
 
 
