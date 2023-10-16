@@ -37,10 +37,9 @@ fridge.push('pesca');
 3. verificare se nell'array di frutta c'è il cocomero:
 - se c'è stampiamo: "Trovato! Devo solo preparare il cocktail."
 - se non lo trovo: "Oh no, devo uscire a comprare il cocomero!"
-*/
-/*
+
 let watermelon = false;
-for (i = 0; i <= fridge.length; i++) {
+for (i = 0; i < fridge.length; i++) {
     if ( fridge[i] == 'cocomero') {
         watermelon = true
     }
@@ -50,7 +49,21 @@ if (watermelon) {
 } else {
     console.log('Oh no, devo uscire a comprare il cocomero!')
 };
-*/
+
+//se io avessi voluto prendere gli ultimi 3 elementi della lista fridge ?
+for( let i = fruits.length - 1; i > fruits.length - 4; i--) {
+    console.log(fruits[i])
+}
+//ad i corrisponde l'ultimo elemento dell'array, ripeti finche i è maggiore del quinto elemento, ad ogni ciclo i scala di un valore 
+//parti dal fondo e risali fino al quinto elemento dell'array
+//poi stampami tutti gli elementi selezionati
+
+
+
+//ricordati che se non riesci a capire il motivo del tuo errore, fare un console log può aiutarti a sbloccare la situazione
+
+console.log(fridge[i], watermelon)
+/*
 
 
 
@@ -88,6 +101,7 @@ btn.addEventListener('click', function() {
         //pertento voglio che per ogni valore generato pushi un numero a caso estratto dal rng in un array dichiarato prima 
         list.push(getRndInteger(1, 101));
     };
+    /*
     //creo una let che mi estragga gli ultimi 5 elementi della array creata
     //in questo diciamo: lastfive è uguale ad un array composto dagli elementi -5 di list, -4 di list, -3 di list...
     let lastfive = [
@@ -97,8 +111,13 @@ btn.addEventListener('click', function() {
         (list[list.length - 2]),
         (list[list.length - 1]),
     ];
-    //adesso stampameli in console
-    console.log(lastfive);
+    */
+   let lastfive = [];
+   for(let i = list.length - 1; i > list.length - 6; i --) {
+        lastfive.push(list[i]);
+   }
+
+   console.log(lastfive);
 
     if (arrnumber <= 5 ) {
         result.innerHTML =`Ecco gli ultimi valori: ${list}.` 
@@ -116,15 +135,10 @@ btn.addEventListener('click', function() {
 });
 
 
-
-
-
 //contatore randomico
 function getRndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
-
 
 
 
