@@ -362,3 +362,140 @@ btn.addEventListener('click', function(){
 });
 
 
+//recap pomeridiano
+
+/*
+quando usare il for ? 
+quando abbiamo  un numero preciso/noto di volte in cui il processo andrà ripetuto!
+nel resto dei casi (e quando abbiamo condizioni complesse) usiamo il while!
+*/
+
+//che differenze abbiamo tra questi for?
+
+//in questo la let è dichiara rpima quindi permane fuori dal for stesso
+//qua il sistema crea solo una i, quella della varibaile 
+let = i
+for(i = 0; i<10; i++){
+}
+
+//qua hai il let dichiarato all'interno della funzione, si esaurisce al termin edi essa
+//è la forma più consigliata perchè crea una variabile in console log per ogni singolo ciclo e ci permette di visualizzarle e sfruttarle
+for(let i = 0; i<10; i++){
+}
+
+//questa è la piu sbagliata!! in questo non ho dichiarato una let e quindi qusta permane per tutto il sistema spargendo distruzione e morte 
+for(i = 0; i<10; i++){
+}
+
+
+//esercizio 
+
+
+
+let arr = [1,2,3,4,5,6,7,8,9,10];
+
+//01/stampiamo ogni elemento dell'array!
+
+for(let i=0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+//02/stampiamo gli elementi di 2 in 2 partendo dal secondo!
+
+//gli sto dicendo: i è uguale a 1 (che nell'array corrisponde all'elemento 2 in quanto parte da 0), scorri lungo tutta la array e ogni volta aumenta di 2
+for(let i = 1; i < arr.length; i+=2) {
+    console.log(arr[i]);
+}
+
+//03/stampa gli array in ordine inverso!
+
+//gli sto dicendo: i parti dall'ultima posizione, scorri finche non hai valore 0, ad ogni ciclo vai indietro
+for(let i = arr.length - 1 ; i >= 0 ; i--) {
+    console.log(arr[i]);
+}
+
+//04/quanti numeri pari ci sono ?
+
+//creo una variabile che mi conti gli elementi pari
+let count = 0
+for(let i = 0; i <= arr.length - 1; i++) {
+
+    if(arr[i] % 2 === 0) {
+        count++;
+    }
+}
+
+
+//05/esiste un numero maggiore di 7?
+
+
+let check = false
+for(let i = 0; i <= arr.length - 1; i++) {
+
+    if(arr[i] > 7) {
+        check = true;
+    }
+}
+
+let result = document.innerHTML('ipotetico div');
+
+if(check) {
+    result.innerHTML = 'si'
+} else {
+    result.innerHTML = 'no'
+}
+
+//oppure col while 
+
+let check = false;
+let i = 0;
+while(i < arr.length && !check){
+
+    if(arr[i] > 7) {
+        check = true;
+    }
+
+    i++;
+}
+
+let result = document.innerHTML('ipotetico div');
+
+if(check) {
+    result.innerHTML = 'si'
+} else {
+    result.innerHTML = 'no'
+}
+
+
+//06/ separa gli array
+arr = [
+    [1,'a'],
+    [2,'b'],
+    [3,'c'],
+] 
+
+let letters = [];
+let number = [];
+//sappiamo che ogni mini array ha come primo elemento un numero mentre come secondo una lettera, quindi:
+for(let i = 0; i < arr.length; i++) {
+    //ogni volta che cicla pusha tutti i primi elementi degli array in letters
+    letters.push(arr[i][0]);
+    //e pusha tutti i secondi elementi in numbers
+    numbers.push(arr[i][1]);
+}
+
+
+//console.group 
+
+//è un comando da dare al sistema per raggruppare una serie di console log di elementi vari
+
+//es:
+
+let letters = [];
+let number = [];
+
+console.group('prova01');
+
+//questo consolegroup conterrà i log, divisi in cartelle, delle varie let
+
+
